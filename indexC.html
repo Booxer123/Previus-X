@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana di GitHub</title>
+    <style>
+        /* CSS Internal */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+        
+        header {
+            background: #24292e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background: #444;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        
+        nav ul li a {
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+        }
+        
+        nav ul li a:hover {
+            background: #666;
+            border-radius: 3px;
+        }
+        
+        main {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        section {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            color: #666;
+        }
+        
+        form {
+            margin-top: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        
+        button {
+            background: #24292e;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: #444;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Website Sederhana</h1>
+        <p>Contoh single file HTML untuk GitHub Pages</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <section id="home">
+            <h2>Selamat Datang</h2>
+            <p>Ini adalah contoh website dalam 1 file HTML saja yang bisa dihosting di GitHub Pages.</p>
+            <p>Cara menggunakannya:</p>
+            <ol>
+                <li>Salin semua kode ini</li>
+                <li>Buat file index.html di repository GitHub Anda</li>
+                <li>Tempelkan kode ini</li>
+                <li>Commit dan push ke GitHub</li>
+            </ol>
+        </section>
+        
+        <section id="about">
+            <h2>Tentang Kami</h2>
+            <p>Website ini dibuat untuk menunjukkan bahwa Anda bisa membuat website sederhana dengan hanya 1 file HTML.</p>
+            <p>Semua CSS dan JavaScript sudah termasuk dalam file ini.</p>
+        </section>
+        
+        <section id="contact">
+            <h2>Hubungi Kami</h2>
+            <form id="contactForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                
+                <label for="message">Pesan:</label>
+                <textarea id="message" rows="4" required></textarea>
+                
+                <button type="submit">Kirim Pesan</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Website Sederhana. Hosting oleh GitHub Pages.</p>
+    </footer>
+    
+    <script>
+        // JavaScript Internal
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            alert(`Terima kasih ${name}! Pesan Anda telah diterima. Kami akan menghubungi Anda di ${email} segera.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
